@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Photo Layers Toggling v5</title>
+
+<style>
+body {
+		width:100%;	
+		background-image:url('images/photo analysis ui final.jpg');
+		background-repeat:no-repeat;
+		background-size:1px 1px;
+	}
+	
+	
+	
+</style>
+
+
+
+</head>
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+
+<script type="text/javascript">
+	
+</script>
+
+
+
+
+
+<body>
+
+
+<!-- BEGINNING OF PHOTO LAYERS AND VIEWER-->
+<link href='photoLayers.css' rel='stylesheet' type='text/css'>
+<script src="photoLayers.js"></script>
+<div id="topContent" >
+
+
+<div id="photoContainer">
+	<div class="photo layer hidden" style="z-index:1900;" id="placenames" data-defaultdisplay="hide"><img src="images/Img10-placenames.png" data-defaultdisplay="hide" alt="" /></div>
+	<div class="photo layer hidden" style="z-index:900;" id="trailnames" data-defaultdisplay="hide"><img src="images/Img10-trailnames.png" alt=""/></div>
+	<div class="photo layer hidden" style="z-index:800;" id="trails" data-defaultdisplay="hide"><img src="images/Img10-trails.png" alt=""/></div>
+	<div class="photo layer hidden" style="z-index:700;" id="tint" data-defaultdisplay="hide"><img src="images/Img10-base-tint.jpg"  alt=""/></div>
+	<div class="photo" style="z-index:600;" id="bw" data-defaultdisplay="show"><img src="images/Img10-base.jpg"  alt=""/></div>
+</div>
+
+
+<div id="photoNavContainer">
+	<div id="imageControls" style="opacity:0.5">
+	
+		<h4>Augment This Photograph</h4>
+		<p>Checking the boxes below will reveal additional image layers</p>
+	
+		<form name="toggler" id="photoLayerForm">
+
+
+		<!--Display layers:&nbsp;<br />--> 
+		
+		</form>
+	
+	<p id="layerDescriptionText"> </p> 
+	</div><!-- end imageControls"-->
+	
+</div><!--end photoNavContainer-->
+
+<!--br clear="all" /-->
+
+
+</div><!-- end of top matter-->
+<!-- END OF PHOTO LAYERS AND VIEWER-->
+
+
+
+<p><span style="font-size: medium; line-height: 2;"><em>Enchanting the Desert</em> explicates the space produced by an early-twentieth-century photographic slideshow of the Grand Canyon made by journeyman photographer Henry Peabody. In its original format this mass-marketed, narrated series of 43 images virtually transported audiences from around the United States to the Canyon through landscape views and audio descriptions, yet the geography of the Canyon that was portrayed remained obscured, lost in the genre of the slideshow itself. In this revival of Peabody’s slideshow you can watch the slideshow in its entirety, discover where the photographer was standing when he took each picture, examine the specific territories within the Canyon that appear in the photos (those that comprise our collective visual imagination of it), and learn about the landmark features you observe in each of the photographs. Read the essays and landmark descriptions to dive deeper into the history of the Grand Canyon, the history of photography, and the geographical-theoretical underpinnings that guide this work.<br />
+</span></p>
+<p><span style="font-size: medium; line-height: 2;">The medium of this scholarship is a website, but the genre of this scholarship is something new. It is born-digital, peer-reviewed, and relays content that cannot exist outside the genre; it is not an e-book. To my knowledge it is a genre without a name, though fitting to at least this project might be the term <span style="text-decoration: underline;">Viewtext</span>.<br />
+</span></p>
+
+
+
+<script>
+$(document).ready(function(){
+	//initCheckboxes();
+	initPhotoLayers()
+});
+</script>
+
+</body>
+</html>
