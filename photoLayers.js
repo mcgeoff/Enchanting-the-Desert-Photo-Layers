@@ -1,5 +1,5 @@
 
-	// moved these to html embed
+	// moved these to html embed, and then to html snippet in wordpress
 	
 	/*var photoLayerTexts = {
 		"labels":{
