@@ -1,5 +1,12 @@
+/* loads additional weights of Raleway font - I know that this will alter page appearance; need to load more weights for WordPress theme to fix this */
+@import url("http://fonts.googleapis.com/css?family=Raleway:500,800,200");
+  
+  /* for slimming article body area */
+  .su-tabs {width:66%;min-width:650px;}
+
 #topContent {
-		width:100%;
+		
+		width:144%;/* in order to extend image nav into right rail area */
 		/*background:#fff;*/
 		overflow:auto;
 
@@ -31,7 +38,7 @@
 		display:inline-block;
 		position:relative;
 		float:left;
-		width:75%;
+		width:70%; /* 70 percent of 140 percent,so mostly fills left column well*/
 		max-width:900px;
 		height:100%;
 		padding:0px
@@ -40,6 +47,7 @@
 	}
 	
 	#photoNavContainer {
+		text-rendering: optimizeLegibility;
 		display:inline-block
 		position:relative;
 		float:left;
@@ -47,27 +55,29 @@
 		padding:15px;
 		padding-top:0px;
 		min-width:150px;
-		font-family:avenir;
-		/*background:#ccc;*/
+		font-family:'Raleway',sans-serif;
 	}
 	#imageControls h4{
 		/*color:#ff0000;*/
 		font-size:15px;	
 		margin-bottom:-7px;
+		font-weight:800;
 	}
 	
 	
-	#imageControls p {
+	#imageControls p, #layerDescriptionText {
 		max-width:220px;
 		line-height:1.6;
 		/*color:#336699;*/
 		font-size:12px;	
+		font-weight:300;
 	}
 	
-	
+	#layerDescriptionText {
+		margin-top:10px; 
+	 }
 	
 	#imageControls label {
-		/*color:#333;*/
 		font-size:13px;
 		display:inline-block;
 		border-top: 1px solid #c6c6c6;
@@ -76,6 +86,7 @@
 		width:80%;
 		min-width:110px;
 		max-width:220px;
+		font-weight:500;
 	}
 	#imageControls label:first-child {
 		

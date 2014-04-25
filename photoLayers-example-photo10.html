@@ -2,14 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Photo Layers Toggling v5</title>
+<title>Photo Layers Toggling Demo</title>
 
 <style>
 body {
 		width:100%;	
-		background-image:url('images/photo analysis ui final.jpg');
-		background-repeat:no-repeat;
-		background-size:1px 1px;
 	}
 	
 	
@@ -17,19 +14,9 @@ body {
 </style>
 
 
-
-</head>
-
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
 </head>
-
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-
-
-<script type="text/javascript">
-	
-</script>
 
 
 
@@ -40,41 +27,56 @@ body {
 
 <!-- BEGINNING OF PHOTO LAYERS AND VIEWER-->
 <link href='http://enchantingthedesert.com/css/photoLayers.css' rel='stylesheet' type='text/css'>
+<!--link href='photoLayers.css' rel='stylesheet' type='text/css'-->
 <script src="http://enchantingthedesert.com/js/photoLayers.js"></script>
+<!--script src="photoLayers.js"></script-->
+
 <div id="topContent" >
 
 
-<div id="photoContainer">
-	<div class="photo layer hidden" style="z-index:1900;" id="placenames" data-defaultdisplay="hide"><img src="images/Img10-placenames.png" data-defaultdisplay="hide" alt="" /></div>
-	<div class="photo layer hidden" style="z-index:900;" id="trailnames" data-defaultdisplay="hide"><img src="images/Img10-trailnames.png" alt=""/></div>
-	<div class="photo layer hidden" style="z-index:800;" id="trails" data-defaultdisplay="hide"><img src="images/Img10-trails.png" alt=""/></div>
-	<div class="photo layer hidden" style="z-index:700;" id="tint" data-defaultdisplay="hide"><img src="images/Img10-base-tint.jpg"  alt=""/></div>
-	<div class="photo" style="z-index:600;" id="bw" data-defaultdisplay="show"><img src="images/Img10-base.jpg"  alt=""/></div>
-</div>
+	<div id="photoContainer">
+
+	<div class="photo layer hidden" style="z-index:1900;" id="placenames" data-defaultdisplay="hide"><img src="http://www.enchantingthedesert.com/photos/Img10-placenames.png" data-defaultdisplay="hide" alt="" /></div>
+
+	<div class="photo layer hidden" style="z-index:900;" id="trailnames" data-defaultdisplay="hide"><img src="http://www.enchantingthedesert.com/photos/Img10-trailnames.png" alt=""/></div>
+
+	<div class="photo layer hidden" style="z-index:800;" id="trails" data-defaultdisplay="hide"><img src="http://www.enchantingthedesert.com/photos/Img10-trails.png" alt=""/></div>
+
+	<div class="photo layer hidden" style="z-index:700;" id="tint" data-defaultdisplay="hide"><img src="http://www.enchantingthedesert.com/photos/Img10-base-tint.jpg"  alt=""/></div>
+
+	<div class="photo" style="z-index:600;" id="bw" data-defaultdisplay="show"><img src="http://www.enchantingthedesert.com/photos/Img10-base.jpg"  alt=""/></div>
+
+	</div>
 
 
-<div id="photoNavContainer">
-	<div id="imageControls" style="opacity:0.5">
+
+	<div id="photoNavContainer">
+		<div id="imageControls" style="opacity:0.5">
 	
-		<h4>Augment This Photograph</h4>
-		<p>Checking the boxes below will reveal additional image layers</p>
+			<h4>Augment This Photograph</h4>
+			<p>Checking the boxes below will reveal additional image layers</p>
 	
-		<form name="toggler" id="photoLayerForm">
-
-
-		<!--Display layers:&nbsp;<br />--> 
-		
-		</form>
+			<form name="toggler" id="photoLayerForm">
+			</form>
 	
-	<p id="layerDescriptionText"> </p> 
-	</div><!-- end imageControls"-->
+		</div><!-- end imageControls"-->
 	
-</div><!--end photoNavContainer-->
+	
+		<div id="layerDescriptionText"> </div> 
+	
+	</div><!--end photoNavContainer-->
 
-<!--br clear="all" /-->
+	<br clear="all" />
 
 
 </div><!-- end of top matter-->
+
+<script>
+$(document).ready(function(){
+	initPhotoLayers()
+});
+</script>
+
 <!-- END OF PHOTO LAYERS AND VIEWER-->
 
 
@@ -85,13 +87,6 @@ body {
 </span></p>
 
 
-
-<script>
-$(document).ready(function(){
-	//initCheckboxes();
-	initPhotoLayers()
-});
-</script>
 
 </body>
 </html>

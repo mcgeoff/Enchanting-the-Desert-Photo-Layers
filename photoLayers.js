@@ -1,7 +1,7 @@
-//alert("script here!")
+
+	// moved these to html embed
 	
-	
-	var photoLayerTexts = {
+	/*var photoLayerTexts = {
 		"labels":{
 			"default":"",
 			"placenames":"Place Names",
@@ -18,19 +18,16 @@
 			"tint":"Text to describe tint goes here"
 		}
 		
-	};
+	};*/
 	
 	function initPhotoLayers(){
-		//var placenames = document.getElementById("placenames");
-		//var trails = document.getElementById("trails");
-		//var tint = document.getElementById("tint");
+	
 		console.log("initPhotoLayers running");
 		
-		//$("#placenames").toggleClass("hidden");
-		//$("#trails").toggleClass("hidden");
-		//$("#tint").toggleClass("hidden");
+		//var photosOnPage = $(".photo").length;
+		var photosOnPage = $("#photoContainer .photo").length; // there were extra pix in wp page
 		
-		var photosOnPage = $(".photo").length;
+		
 		console.log("initPhotoLayers says " + photosOnPage + " photos");
 		
 		var targetForm = $("#photoLayerForm");
@@ -42,13 +39,9 @@
 		
 			var currentPhotoDiv = $('.photo:nth-child(' + i + ')');
 			
-			$("#photoLayerForm").append("<label class=\"imageLayerLabel\" id=\"placenames\"><input type=\"checkbox\" class=\"imageLayerCheckbox\" name=\"" + currentPhotoDiv.attr("id") + "\" value=\"" + currentPhotoDiv.attr("id") + "\" id=\"checkbox_" + currentPhotoDiv.attr("id") + "\">" + photoLayerTexts.labels[currentPhotoDiv.attr("id")] + "</label> &nbsp;<br />");
+			$("#photoLayerForm").append("<label class=\"imageLayerLabel\" id=\"placenames\"><input type=\"checkbox\" class=\"imageLayerCheckbox\" name=\"" + currentPhotoDiv.attr("id") + "\" value=\"" + currentPhotoDiv.attr("id") + "\" id=\"checkbox_" + currentPhotoDiv.attr("id") + "\">&nbsp;&nbsp;" + photoLayerTexts.labels[currentPhotoDiv.attr("id")] + "</label> &nbsp;<br />");
 			
 			
-			
-			
-		
-			//if($(".photo")[i].data("defaultdisplay") == "hide"){
 			if(defaultDisplayTemp == "hide"){
 				//fade out photo to hide it
 				currentPhotoDiv.fadeTo(0,0);
@@ -57,8 +50,7 @@
 				currentPhotoDiv.fadeTo(1000,1);
 			}
 			// remove display=none in any case
-			//currentPhotoDiv.toggleClass("hidden"); // this is the problem with base image
-			currentPhotoDiv.removeClass("hidden"); // this should work
+			currentPhotoDiv.removeClass("hidden"); 
 		}
 		
 		
@@ -69,31 +61,14 @@
 
 	//function initCheckboxes(){
 		console.log("initCheckboxes running");
-		/*$('#overlay_tint')
-			.bind('click',function(event){
-				testCheckboxes(this.id);
-			});
-			
-		$('#overlay_trails')
-			.bind('click',function(event){
-				testCheckboxes(this.id);
-			});
-					
-		$('#overlay_trailnames')
-			.bind('click',function(event){
-				testCheckboxes(this.id);
-			});	
-			
-		$('#overlay_placenames')
-			.bind('click',function(event){
-				testCheckboxes(this.id);
-			});*/
+		
 		
 		$(".imageLayerCheckbox").bind('click',function(event){
 				//console.log("checked " + this.id);{
 				testCheckboxes(this.id);
 			});	
 		
+		// can be used for tooltips
 		/*$(".imageLayerLabel").bind('mouseover',function(event){
 				console.log("mouseover " + this.id);
 			});	*/
@@ -101,13 +76,11 @@
 		
 		$("#photoNavContainer").bind('mouseenter',function(event){
 				//console.log("imageControls mouseover");
-				//$("#imageControls").removeClass("navInert");
 				$("#imageControls").fadeTo(200,1);
 		});
 			
 		$("#photoNavContainer").bind('mouseleave',function(event){
 				//console.log("imageControls mouseover");
-				//$("#imageControls").addClass("navInert");
 				$("#imageControls").fadeTo(200,0.5);
 		});		
 		
@@ -131,7 +104,6 @@
 		if($("#" + checkbox).prop('checked')){
 			
 			console.log(checkbox + " is checked!");	
-			//$("#" + checkTarget).css("visibility","visible");
 			$("#" + checkTarget).fadeTo(200,1);
 			updateLayerDescription(checkTarget);
 			
@@ -140,7 +112,6 @@
 		} else {
 			
 			console.log(checkbox + " is not checked!");	
-			//$("#" + checkTarget).css("visibility","hidden");
 			$("#" + checkTarget).fadeTo(200,0);
 			$("#layerDescriptionText").text("");
 		}
